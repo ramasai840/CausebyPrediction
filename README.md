@@ -13,11 +13,11 @@ The data set is collected from Kaggle.
 https://www.kaggle.com/datasets/venkatasubramanian/automatic-ticket-classification
 
 ### Implementation
-## Description of Model Implementation
-# Traditional NLP Model Implementation:
+
+#### Traditional NLP Model Implementation:
   The models adhere to the standard classification framework. Features are processed into a combined input feature of Complaints as a sparse matrix, with Products as the target variable. Further employed Random Forest, an ensemble technique that builds an additive model by minimizing the loss function's expected value. It refines predictions using a series of weak learners, typically decision trees, ensuring high accuracy and efficiency in various tasks.
 
-# BERT Large Language Model Implementation:
+#### BERT Large Language Model Implementation:
   This involves fine-tuning of a BERT-based-uncased model from Hugging Face to enhance AUC and classification performance. Due to computational resource limitations, we retrained the model on a modified dataset with 5 instead of 17 categories. This was done using Google Colab Pro with a T4 GPU, utilizing 96.4 compute units and taking 3 hours of total training time. The model, pre-trained with 7 billion parameters, was specifically chosen for sequence classification from the TensorFlow Python library. It was pre-trained on a corpus of 11,038 unpublished books and English Wikipedia. The model underwent 30 epochs of training with negligible observed loss.
   
 ### Classes
